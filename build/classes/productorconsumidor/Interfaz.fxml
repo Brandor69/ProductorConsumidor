@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="productorconsumidor.ControlHilos">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutY="133.0" prefHeight="269.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="consumidor" layoutX="36.0" layoutY="14.0" prefHeight="234.0" prefWidth="297.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutX="-1.0" layoutY="14.0" prefHeight="17.0" prefWidth="299.0" text="Consumidor" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="productor" layoutX="48.0" layoutY="34.0" prefHeight="234.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutY="14.0" prefHeight="17.0" prefWidth="295.0" text="Productor" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <GridPane layoutX="6.0" layoutY="103.0" prefHeight="28.0" prefWidth="600.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="64.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="536.0" minWidth="10.0" prefWidth="536.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Buffer" />
+            <Label fx:id="buffer" prefHeight="17.0" prefWidth="537.0" text="Label" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <ToggleButton fx:id="botonIA" layoutX="73.0" layoutY="55.0" mnemonicParsing="false" onAction="#botonIA" prefHeight="25.0" prefWidth="132.0" text="Iniciar Proceso" />
+      <Button fx:id="animacion" layoutX="387.0" layoutY="55.0" mnemonicParsing="false" text="Ver Animacion" />
+   </children>
+</AnchorPane>

@@ -19,12 +19,17 @@ public class Buffer {
         hayEspacio = new Semaphore(b.length,true);
         
     }
+
+    public int[] getB() {
+        return b;
+    }
+    
     
     public void ingresar(int dato) throws InterruptedException{
         hayEspacio.acquire();
         mutex.acquire();
         b[i] = dato;
-        System.out.println("Productor Produce:"+dato);
+        //System.out.println("Productor Produce:"+dato);
         i = (i+1)% b.length;
         mutex.release();
         hayDatos.release();
@@ -37,10 +42,12 @@ public class Buffer {
         mutex.acquire();
         int aux = j;
         j = (j+1)%b.length;
-        System.out.println("Consumidor Consume:"+b[aux]);
+        //System.out.println("Consumidor Consume:"+b[aux]);
         mutex.release();
         hayEspacio.release();
-        return b[aux];
+        int dato = b[aux];
+        b[aux] = 0;
+        return dato;
         
     }
 }
