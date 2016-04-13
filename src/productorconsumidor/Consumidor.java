@@ -13,11 +13,13 @@ public class Consumidor extends Thread {
     private Buffer b;
     private int iteracion;
     private ControlHilos interfaz;
+    private int velocidad;
 
-    public Consumidor(Buffer b, int iteracion, ControlHilos interfaz) {
+    public Consumidor(Buffer b, int iteracion, ControlHilos interfaz,int velocidad) {
         this.b = b;
         this.iteracion = iteracion;
         this.interfaz = interfaz;
+        this.velocidad = velocidad;
     }
 
     @Override
@@ -34,7 +36,7 @@ public class Consumidor extends Thread {
                         interfaz.agregarConsumido(ite, numero);
                     }
                 });
-                Consumidor.sleep(1000);
+                Consumidor.sleep(velocidad);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }

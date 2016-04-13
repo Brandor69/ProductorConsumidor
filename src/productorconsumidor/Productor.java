@@ -15,12 +15,14 @@ public class Productor extends Thread {
     private Buffer b;
     private int iteracion;
     private ControlHilos interfaz;
+    private int velocidad;
 
-    public Productor(Buffer b, int iteraciones, ControlHilos interfaz) {
+    public Productor(Buffer b, int iteraciones, ControlHilos interfaz,int velocidad) {
 
         this.b = b;
         this.iteracion = iteraciones;
         this.interfaz = interfaz;
+        this.velocidad = velocidad;
     }
 
     @Override
@@ -37,7 +39,7 @@ public class Productor extends Thread {
                     }
                 });
                 b.ingresar(numero);
-                Productor.sleep(100);
+                Productor.sleep(velocidad);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }

@@ -12,14 +12,14 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <ListView fx:id="consumidor" layoutX="36.0" layoutY="14.0" prefHeight="234.0" prefWidth="297.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Label layoutX="-1.0" layoutY="14.0" prefHeight="17.0" prefWidth="299.0" text="Consumidor" />
+                  <ListView fx:id="productor" layoutX="36.0" layoutY="14.0" prefHeight="234.0" prefWidth="297.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutX="-1.0" layoutY="14.0" prefHeight="17.0" prefWidth="299.0" text="Productor" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <ListView fx:id="productor" layoutX="48.0" layoutY="34.0" prefHeight="234.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Label layoutY="14.0" prefHeight="17.0" prefWidth="295.0" text="Productor" />
+                  <ListView fx:id="consumidor" layoutX="48.0" layoutY="34.0" prefHeight="234.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutY="14.0" prefHeight="17.0" prefWidth="295.0" text="Consumidor" />
                </children>
             </AnchorPane>
         </items>
@@ -38,6 +38,9 @@
          </children>
       </GridPane>
       <ToggleButton fx:id="botonIA" layoutX="73.0" layoutY="55.0" mnemonicParsing="false" onAction="#botonIA" prefHeight="25.0" prefWidth="132.0" text="Iniciar Proceso" />
-      <Button fx:id="animacion" layoutX="387.0" layoutY="55.0" mnemonicParsing="false" text="Ver Animacion" />
+      <Button fx:id="animacion" layoutX="475.0" layoutY="55.0" mnemonicParsing="false" onAction="#abrirAnimacion" text="Ver Animacion" />
+      <CheckBox fx:id="mismaVelocidad" layoutX="256.0" layoutY="32.0" mnemonicParsing="false" onAction="#cambiarSeleccion" selected="true" text="Misma Velocidad" />
+      <CheckBox fx:id="productorMasRap" layoutX="256.0" layoutY="59.0" mnemonicParsing="false" onAction="#cambiarSeleccion" text="Productor mas rapido" />
+      <CheckBox fx:id="consumidorMasRap" layoutX="256.0" layoutY="86.0" mnemonicParsing="false" onAction="#cambiarSeleccion" text="Consumidor mas rapido" />
    </children>
 </AnchorPane>
